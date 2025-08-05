@@ -3,10 +3,11 @@ import Benefits from "./components/Benefits";
 import Collaboration from "./components/Collaboration";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
 import Pricing from "./components/Pricing";
-import Roadmap from "./components/Roadmap";
+import Colors from "./components/Colors";
+import Specifications from "./components/Specifications";
 import Services from "./components/Services";
+import Roadmap from "./components/Roadmap";
 
 const App = () => {
   return (
@@ -15,9 +16,11 @@ const App = () => {
         <Header />
         <Services />
         <Benefits />
+        <Colors />
+        <Specifications />
+        <Roadmap />
         <Collaboration />
         <Pricing />
-        <Roadmap />
         <Footer />
       </div>
 

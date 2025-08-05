@@ -6,7 +6,7 @@ import { LeftLine, RightLine } from "./design/Pricing";
 
 const Pricing = () => {
   return (
-    <Section className="overflow-hidden" id="pricing">
+    <Section className="overflow-hidden bg-gradient-to-br from-gray-50 to-pink-50" id="pricing">
       <div className="container relative z-2">
         <div className="hidden relative justify-center mb-[6.5rem] lg:flex">
           <img
@@ -28,8 +28,8 @@ const Pricing = () => {
         </div>
 
         <Heading
-          tag="Get started with GoVV"
-          title="Choose your solution"
+          tag="Choose Your Plan"
+          title="Pricing for Every Need"
         />
 
         <div className="relative">
@@ -41,9 +41,9 @@ const Pricing = () => {
         <div className="flex justify-center mt-10">
           <a
             className="text-xs font-code font-bold tracking-wider uppercase border-b"
-            href="/pricing"
+            href="mailto:business@govv.com"
           >
-            View all plans
+            Contact for bulk orders
           </a>
         </div>
       </div>

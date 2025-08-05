@@ -4,11 +4,11 @@ import Button from "./Button";
 
 const PricingList = () => {
   return (
-    <div className="flex gap-[1rem] max-lg:flex-wrap">
+    <div className="flex justify-center gap-[2rem] max-lg:flex-wrap">
       {pricing.map((item) => (
         <div
           key={item.id}
-          className="w-[19rem] max-lg:w-full h-full px-6 bg-light-11 border border-light-8 rounded-[2rem] lg:w-auto even:py-14 odd:py-8 odd:my-4 [&>h4]:first:text-color-2 [&>h4]:even:text-color-1 [&>h4]:last:text-color-3"
+          className="w-[22rem] max-lg:w-full h-full px-8 py-10 bg-gradient-to-br from-white to-gray-50 rounded-[2rem] lg:w-auto shadow-lg"
         >
           <h4 className="h4 mb-4">{item.title}</h4>
 
@@ -17,29 +17,33 @@ const PricingList = () => {
           </p>
 
           <div className="flex items-center h-[5.5rem] mb-6">
-            {item.price && (
+            {item.price && item.price !== "Contact" ? (
               <>
-                <div className="h3">$</div>
+                <div className="h3">{item.currency}</div>
                 <div className="text-[5.5rem] leading-none font-bold">
                   {item.price}
                 </div>
               </>
+            ) : (
+              <div className="text-[2.5rem] leading-none font-bold text-gradient">
+                Contact Sales
+              </div>
             )}
           </div>
 
           <Button
             className="w-full mb-6"
-            href={item.price ? "/pricing" : "mailto:contact@govv.com"}
-            white={!!item.price}
+            href={item.price && item.price !== "Contact" ? "#pricing" : "mailto:business@govv.com"}
+            white={!!item.price && item.price !== "Contact"}
           >
-            {item.price ? "Get started" : "Contact us"}
+            {item.price && item.price !== "Contact" ? "Buy Now" : "Contact Sales"}
           </Button>
 
           <ul>
             {item.features.map((feature, index) => (
               <li
                 key={index}
-                className="flex items-start py-5 border-t border-light-8"
+                className="flex items-start py-5"
               >
                 <img src={check} width={24} height={24} alt="Check" />
                 <p className="body-2 ml-4">{feature}</p>

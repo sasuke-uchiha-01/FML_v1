@@ -31,13 +31,13 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50  border-b border-light-8 lg:bg-light-13/90 lg:backdrop-blur-sm ${
+      className={`fixed top-0 left-0 w-full z-50 lg:bg-light-13/90 lg:backdrop-blur-sm ${
         openNavigation ? "bg-light-13" : "bg-light-13/90 backdrop-blur-sm"
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="#hero">
-          <img src={yourlogo} width={190} height={40} alt="GoVV" />
+          <img src={yourlogo} width={190} height={40} alt="GOVV" />
         </a>
 
         <nav
@@ -68,13 +68,13 @@ const Header = () => {
         </nav>
 
         <a
-          href="#signup"
+          href="#contact"
           className="button hidden mr-8 text-light-1/50 transition-colors hover:text-light-1 lg:block"
         >
-          New account
+          Contact Us
         </a>
-        <Button className="hidden lg:flex" href="#login">
-          Sign in
+        <Button className="hidden lg:flex" href="#test-ride">
+          Book Test Ride
         </Button>
 
         <Button

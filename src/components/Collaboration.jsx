@@ -6,11 +6,11 @@ import { LeftCurve, RightCurve } from "./design/Collaboration";
 
 const Collaboration = () => {
   return (
-    <Section crosses>
+    <Section crosses className="bg-gradient-to-br from-gray-50 to-indigo-50">
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">
-            Smart Campus Mobility for seamless last-mile connectivity
+            Partner with GOVV for sustainable campus mobility
           </h2>
 
           <ul className="max-w-[22rem] mb-10 md:mb-14">
@@ -27,7 +27,7 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          <Button>Join GoVV</Button>
+          <Button href="mailto:partnerships@govv.com">Partner with GOVV</Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
@@ -43,7 +43,7 @@ const Collaboration = () => {
                     src={yourlogo}
                     width={48}
                     height={48}
-                    alt="GoVV"
+                    alt="GOVV"
                   />
                 </div>
               </div>

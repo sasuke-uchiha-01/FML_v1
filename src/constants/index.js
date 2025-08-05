@@ -49,24 +49,24 @@ export const navigation = [
   },
   {
     id: "2",
-    title: "How to use",
-    url: "#how-to-use",
+    title: "Colors",
+    url: "#colors",
   },
   {
     id: "3",
-    title: "Roadmap",
-    url: "#roadmap",
+    title: "Specifications",
+    url: "#specs",
   },
   {
     id: "4",
-    title: "New account",
-    url: "#signup",
+    title: "Contact",
+    url: "#contact",
     onlyMobile: true,
   },
   {
     id: "5",
-    title: "Sign in",
-    url: "#login",
+    title: "Book Test Ride",
+    url: "#test-ride",
     onlyMobile: true,
   },
 ];
@@ -209,34 +209,101 @@ export const pricing = [
   {
     id: "0",
     title: "Campus Rider",
-    description: "Compact e-cycle for campus mobility",
-    price: "Contact",
+    description: "Perfect for campus mobility and urban commuting",
+    price: "24,999",
+    currency: "₹",
     features: [
       "36V Li-ion Battery with 35-40km range",
       "25km/hr speed with pedal assist",
       "Steel step-through frame with front suspension",
+      "4 stunning color options",
+      "LED lighting with horn",
+      "Dual disc brakes for safety",
+      "Dust-proof pedal assist sensor",
+      "1 year warranty",
     ],
   },
   {
     id: "1",
-    title: "Fleet Solution",
-    description: "Smart fleet management for institutions",
+    title: "Business Solutions",
+    description: "Fleet management for institutions and corporates",
     price: "Contact",
+    currency: "",
     features: [
+      "Bulk pricing for fleet orders",
       "Comprehensive fleet management software",
-      "Charging hub infrastructure",
+      "Charging hub infrastructure setup",
       "Real-time tracking and analytics",
+      "Dedicated support team",
+      "Custom branding options",
+      "Maintenance contracts",
+      "Training and deployment support",
     ],
+  },
+];
+
+export const campusRiderColors = [
+  {
+    id: "0",
+    name: "Electric Blue",
+    hex: "#0066CC",
+    description: "Bold and modern blue for the tech-savvy rider",
+  },
+  {
+    id: "1",
+    name: "Forest Green",
+    hex: "#2E8B57",
+    description: "Eco-friendly green reflecting sustainability",
   },
   {
     id: "2",
-    title: "Enterprise",
-    description: "Custom solutions for large deployments",
-    price: null,
-    features: [
-      "Custom fleet management solutions",
-      "Dedicated support and maintenance",
-      "Strategic partnership opportunities",
+    name: "Sunset Orange",
+    hex: "#FF6B35",
+    description: "Vibrant orange for the adventurous spirit",
+  },
+  {
+    id: "3",
+    name: "Midnight Black",
+    hex: "#1A1A1A",
+    description: "Classic black for timeless elegance",
+  },
+];
+
+export const campusRiderSpecs = [
+  {
+    category: "Battery & Power",
+    specs: [
+      "BATTERY: 36V, 9Ah, Li-ion, In-built battery",
+      "RANGE: 35-40kms (with pedal assist)",
+      "CHARGER: 2 amp, 42V max",
+      "CHARGING TIME: 5 hours",
+    ],
+  },
+  {
+    category: "Motor & Control",
+    specs: [
+      "MOTOR: 36V, 250W, BLDC Hub Motor",
+      "CONTROLLER: BLDC Motor speed controller, 36V/250W",
+      "THROTTLE: Twist type, Battery indicator with Ignition Key",
+      "PAS: Dust proof single level pedal assist sensor",
+    ],
+  },
+  {
+    category: "Performance & Safety",
+    specs: [
+      "SPEED: 25km/hr",
+      "BRAKES: 3F ebrake levers, Dual disc brakes",
+      "LIGHT & HORN: LED light with in-built horn",
+      "LIGHT & HORN SWITCH: Push button switch",
+    ],
+  },
+  {
+    category: "Frame & Wheels",
+    specs: [
+      "FRAME: Steel - Step Through",
+      "WHEELS: 27.5*2.25 or 2.40 inches Nylon Tyres",
+      "RIM: Double Wall Rim",
+      "SUSPENSION: Front Suspension",
     ],
   },
 ];

@@ -2,64 +2,42 @@ import { benefits } from "../constants";
 import Heading from "./Heading";
 import Section from "./Section";
 import Arrow from "../assets/svg/Arrow";
-import { GradientLight } from "./design/Benefits";
-import ClipPath from "../assets/svg/ClipPath";
 
 const Benefits = () => {
   return (
-    <Section id="features">
+    <Section id="benefits" className="bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container relative z-2">
         <Heading
           className="md:max-w-md lg:max-w-2xl"
-          title="Ride the Green Evolution with GoVV"
+          title="Why Choose Campus Rider?"
         />
 
-        <div className="flex flex-wrap gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {benefits.map((item) => (
             <div
-              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
-              style={{
-                backgroundImage: `url(${item.backgroundUrl})`,
-              }}
+              className="block relative p-6 bg-gradient-to-br from-white to-gray-50 rounded-2xl hover:shadow-2xl transition-all duration-300 group shadow-lg"
               key={item.id}
             >
-              <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
-                <h5 className="h5 mb-5">{item.title}</h5>
-                <p className="body-2 mb-6 text-light-3">{item.text}</p>
-                <div className="flex items-center mt-auto">
+              <div className="flex flex-col h-full">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <img
                     src={item.iconUrl}
-                    width={48}
-                    height={48}
+                    width={24}
+                    height={24}
                     alt={item.title}
                   />
-                  <p className="ml-auto font-code text-xs font-bold text-light-1 uppercase tracking-wider">
-                    Explore more
+                </div>
+                
+                <h5 className="h5 mb-4">{item.title}</h5>
+                <p className="body-2 mb-6 text-light-3 flex-grow">{item.text}</p>
+                
+                <div className="flex items-center mt-auto">
+                  <p className="font-code text-xs font-bold text-light-1 uppercase tracking-wider">
+                    Learn more
                   </p>
                   <Arrow />
                 </div>
               </div>
-
-              {item.light && <GradientLight />}
-
-              <div
-                className="absolute inset-0.5 bg-light-11"
-                style={{ clipPath: "url(#benefits)" }}
-              >
-                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
-                  {item.imageUrl && (
-                    <img
-                      src={item.imageUrl}
-                      width={380}
-                      height={362}
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                </div>
-              </div>
-
-              <ClipPath />
             </div>
           ))}
         </div>
